@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.currencyconverter.fragments.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/home_fragment">
+        <action
+            android:id="@+id/action_homeFragment_to_converterFragment"
+            app:destination="@id/converterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cryptoCurrencies"
+        android:name="com.example.currencyconverter.fragments.CryptoCurrencies"
+        android:label="CryptoCurrencies"
+        tools:layout="@layout/crypto_cyrrencies">
+        <action
+            android:id="@+id/action_cryptoCurrencies_to_converterFragment"
+            app:destination="@id/converterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/converterFragment"
+        android:name="com.example.currencyconverter.fragments.ConverterFragment"
+        android:label="ConverterFragment"
+        tools:layout="@layout/converter_fragment">
+        <action
+            android:id="@+id/action_converterFragment_to_cryptoCurrencies"
+            app:destination="@id/cryptoCurrencies" />
+        <action
+            android:id="@+id/action_converterFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>

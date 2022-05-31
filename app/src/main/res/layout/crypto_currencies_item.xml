@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@drawable/button_background"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15sp"
+    android:layout_marginBottom="15sp">
+
+    <TextView
+        android:id="@+id/cryptoCurrencyName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bitcoin"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/cryptoCurrencyPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:text="28,838$"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/cryptoCurrencyName"
+        app:layout_constraintStart_toStartOf="@+id/cryptoCurrencyName"
+        app:layout_constraintTop_toBottomOf="@+id/cryptoCurrencyName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
